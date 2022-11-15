@@ -1,3 +1,4 @@
+package org.example.Products;
 public class Book extends Product {
 
     protected String author;

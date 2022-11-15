@@ -1,3 +1,4 @@
+package org.example.Products;
 public class Repository {
 
     protected Product[] products = new Product[0];

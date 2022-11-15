@@ -1,3 +1,4 @@
+package org.example.Products;
 public class Product {
 
     protected int id;

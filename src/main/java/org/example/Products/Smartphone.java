@@ -1,3 +1,4 @@
+package org.example.Products;
 public class Smartphone extends Product {
 
     protected String vendor;
