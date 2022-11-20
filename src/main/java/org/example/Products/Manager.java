@@ -1,4 +1,5 @@
 package org.example.Products;
+
 public class Manager {
     protected Repository repo;
 
@@ -37,4 +38,3 @@ public class Manager {
         }
     }
 }
-
