@@ -2,7 +2,7 @@ package org.example.Products;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class RepositoryTest {
+public class RepositorysTest {
     Book book1 = new Book(67, "War and Peace", 1500, "Lev Tolstoy");
     Smartphone phone1 = new Smartphone(89, "Iphone", 9500, "Apple");
     Book book2 = new Book(24, "Big debt crises", 2800, "Ray Dalio");
