@@ -4,15 +4,16 @@ public class Manager {
     protected Repository repo;
 
     public Manager(Repository repo) {
-
         this.repo = repo;
     }
 
     public void add(Product product) {
-
         repo.addProduct(product);
     }
 
+    public void removeById (int id) {
+        repo.removeById(id);
+    }
 
     public Product[] searchBy(String text) {
         Product[] result = new Product[0];
