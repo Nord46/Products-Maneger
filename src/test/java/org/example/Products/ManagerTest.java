@@ -8,7 +8,7 @@ public class ManagerTest {
     Smartphone phone1 = new Smartphone(89, "Iphone", 9500, "Apple");
     Book book2 = new Book(24, "Big debt crises", 2800, "Ray Dalio");
     Smartphone phone2 = new Smartphone(99, "Honor", 8400, "HUAWEI");
-
+    Smartphone phone3 = new Smartphone(98, "Honor", 9000, "HUAWEI");
     @Test
     public void searchProductText() {
         Repository repo = new Repository();
@@ -17,6 +17,7 @@ public class ManagerTest {
         manager.add(phone1);
         manager.add(book2);
         manager.add(phone2);
+        manager.add(phone3);
 
         Product[] expected = {book1};
         Product[] actual = manager.searchBy("War and Peace");
@@ -32,6 +33,7 @@ public class ManagerTest {
         manager.add(phone1);
         manager.add(book2);
         manager.add(phone2);
+        manager.add(phone3);
 
         Product[] expected = {};
         Product[] actual = manager.searchBy("Last Light");
@@ -40,14 +42,17 @@ public class ManagerTest {
     }
 
     @Test
-    public void searchProducts() {
+    public void searchTwoProductsText() {
         Repository repo = new Repository();
-        repo.addProduct(book1);
-        repo.addProduct(phone1);
-        repo.addProduct(book2);
+        Manager manager = new Manager(repo);
+        manager.add(book1);
+        manager.add(phone1);
+        manager.add(book2);
+        manager.add(phone2);
+        manager.add(phone3);
 
-        Product[] expected = {book1, phone1, book2};
-        Product[] actual = repo.findAll();
+        Product[] expected = {phone2, phone3};
+        Product[] actual = manager.searchBy("Honor");
 
         Assertions.assertArrayEquals(expected, actual);
     }
